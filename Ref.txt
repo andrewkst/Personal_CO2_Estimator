@@ -1,0 +1,14 @@
+Emissions intensity
+https://www.hydropower.org/blog/carbon-emissions-from-hydropower-reservoirs-facts-and-myths
+
+
+
+Coal - 820 gCO2-eq/kWh
+Gas - 490 gCO2-eq/kWh
+Oil - 778 gCO2-eq/kWh
+Hydropower - 24 gCO2-eq/kWh
+Renewable - 41 gCO2-eq/kWh
+Nuclear - 12 gCO2-eq/kWh
+
+https://www.tfaforms.com/4666774
+This calculations assume that you use electricity proportionally from all power plants of your country.

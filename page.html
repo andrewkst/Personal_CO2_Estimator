@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <title> Carbon Emission Estimator  </title>
+      <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+      <link rel="stylesheet" href="style.css">
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+   
+   <body>
+   
+      <main class="container">
+      <br>
+      <h1 style="color:rgb(11, 9, 9);"> Simple Personal Carbon Emission Estimator</h1>
+      <section class="secbox">
+      <p style="color:rgb(250, 250, 250);">The calculation is based on the individual electricity usage and personal transportation which does not consider for ssecondary factors. 
+         <br>
+         <br>
+         Two significant upgrades are mentioned in the statistics on access to energy. Initially, 
+         statistics of the percentage of the global, rural, and urban population with access to electricity 
+         (Sustainable Development Goal target 7.1) back to 1990 have been produced through cooperation between the World Bank, 
+         the International Energy Agency, and the Energy Sector Management Assistance Program. Second, the World Bank and 
+         the World Health Organization have created a new indicator called the percentage of people who have access to clean cooking 
+         fuels and technology (Sustainable Development Goal target 7.2) [The World Bank Group]. 
+      </p>
+      <section class="main">
+         <p style="color:#e6e7bf;">
+            This estimate implies that you use electricity from all of your country's power plants in equivalent shares. 
+            Change the data when user has knowledge of electricity generation and consumptoin.
+         </p>
+         <p style="color:#fcfcfc;">
+            * Provided by The World Bank Group as per 2015 data. <br>
+            ** Provided by The Intergovernmental Panel on Climate Change as per 2014 data.
+         </p>
+         <form>
+            <div class="boxx">
+               <label for="countries"> <strong style="color:rgb(255, 255, 255);">Select a desired region: </strong></label> 
+               <select id="countries" onchange="CountrySelected()" autofocus style="color: rgb(255, 255, 255)">
+                  <option value="Albania">Albania</option>
+                  <option value="Algeria">Algeria</option>
+                  <option value="Angola">Angola</option>
+                  <option value="Argentina">Argentina</option>
+                  <option value="Armenia">Armenia</option>
+                  <option value="Australia">Australia</option>
+                  <option value="Austria">Austria</option>
+                  <option value="Azerbaijan">Azerbaijan</option>
+                  <option value="Bahrain">Bahrain</option>
+                  <option value="Bangladesh">Bangladesh</option>
+                  <option value="Belarus">Belarus</option>
+                  <option value="Belgium">Belgium</option>
+                  <option value="Benin">Benin</option>
+                  <option value="Bolivia">Bolivia</option>
+                  <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                  <option value="Botswana">Botswana</option>
+                  <option value="Brazil">Brazil</option>
+                  <option value="Brunei Darussalam">Brunei Darussalam</option>
+                  <option value="Bulgaria">Bulgaria</option>
+                  <option value="Cambodia">Cambodia</option>
+                  <option value="Cameroon">Cameroon</option>
+                  <option value="Canada">Canada</option>
+                  <option value="Chile">Chile</option>
+                  <option value="China">China</option>
+                  <option value="Hong Kong SAR, China">Hong Kong SAR, China</option>
+                  <option value="Colombia">Colombia</option>
+                  <option value="Congo, Dem. Rep.">Congo, Dem. Rep.</option>
+                  <option value="Congo, Rep.">Congo, Rep.</option>
+                  <option value="Costa Rica">Costa Rica</option>
+                  <option value="Cote d'Ivoire">Cote d'Ivoire</option>
+                  <option value="Croatia">Croatia</option>
+                  <option value="Cuba">Cuba</option>
+                  <option value="Curacao">Curacao</option>
+                  <option value="Cyprus">Cyprus</option>
+                  <option value="Czech Republic">Czech Republic</option>
+                  <option value="Denmark">Denmark</option>
+                  <option value="Dominican Republic">Dominican Republic</option>
+                  <option value="Ecuador">Ecuador</option>
+                  <option value="Egypt, Arab Rep.">Egypt, Arab Rep.</option>
+                  <option value="El Salvador">El Salvador</option>
+                  <option value="Eritrea">Eritrea</option>
+                  <option value="Estonia">Estonia</option>
+                  <option value="Ethiopia">Ethiopia</option>
+                  <option value="Finland">Finland</option>
+                  <option value="France">France</option>
+                  <option value="Gabon">Gabon</option>
+                  <option value="Georgia">Georgia</option>
+                  <option value="Germany">Germany</option>
+                  <option value="Ghana">Ghana</option>
+                  <option value="Greece">Greece</option>
+                  <option value="Guatemala">Guatemala</option>
+                  <option value="Haiti">Haiti</option>
+                  <option value="Honduras">Honduras</option>
+                  <option value="Hungary">Hungary</option>
+                  <option value="Iceland">Iceland</option>
+                  <option value="India">India</option>
+                  <option value="Indonesia">Indonesia</option>
+                  <option value="Iran, Islamic Rep.">Iran, Islamic Rep.</option>
+                  <option value="Iraq">Iraq</option>
+                  <option value="Ireland">Ireland</option>
+                  <option value="Israel">Israel</option>
+                  <option value="Italy">Italy</option>
+                  <option value="Jamaica">Jamaica</option>
+                  <option value="Japan">Japan</option>
+                  <option value="Jordan">Jordan</option>
+                  <option value="Kazakhstan">Kazakhstan</option>
+                  <option value="Kenya">Kenya</option>
+                  <option value="Korea, Dem. People’s Rep.">Korea, Dem. People’s Rep.</option>
+                  <option value="Korea, Rep.">Korea, Rep.</option>
+                  <option value="Kosovo">Kosovo</option>
+                  <option value="Kuwait">Kuwait</option>
+                  <option value="Kyrgyz Republic">Kyrgyz Republic</option>
+                  <option value="Latvia">Latvia</option>
+                  <option value="Lebanon">Lebanon</option>
+                  <option value="Libya">Libya</option>
+                  <option value="Lithuania">Lithuania</option>
+                  <option value="Luxembourg">Luxembourg</option>
+                  <option value="Macedonia, FYR">Macedonia, FYR</option>
+                  <option value="Malaysia">Malaysia</option>
+                  <option value="Malta">Malta</option>
+                  <option value="Mauritius">Mauritius</option>
+                  <option value="Mexico">Mexico</option>
+                  <option value="Moldova">Moldova</option>
+                  <option value="Mongolia">Mongolia</option>
+                  <option value="Montenegro">Montenegro</option>
+                  <option value="Morocco">Morocco</option>
+                  <option value="Mozambique">Mozambique</option>
+                  <option value="Myanmar">Myanmar</option>
+                  <option value="Namibia">Namibia</option>
+                  <option value="Nepal">Nepal</option>
+                  <option value="Netherlands">Netherlands</option>
+                  <option value="New Zealand">New Zealand</option>
+                  <option value="Nicaragua">Nicaragua</option>
+                  <option value="Niger">Niger</option>
+                  <option value="Nigeria">Nigeria</option>
+                  <option value="Norway">Norway</option>
+                  <option value="Oman">Oman</option>
+                  <option value="Pakistan">Pakistan</option>
+                  <option value="Panama">Panama</option>
+                  <option value="Paraguay">Paraguay</option>
+                  <option value="Peru">Peru</option>
+                  <option value="Philippines">Philippines</option>
+                  <option value="Poland">Poland</option>
+                  <option value="Portugal">Portugal</option>
+                  <option value="Qatar">Qatar</option>
+                  <option value="Romania">Romania</option>
+                  <option value="Russian Federation">Russian Federation</option>
+                  <option value="Saudi Arabia">Saudi Arabia</option>
+                  <option value="Senegal">Senegal</option>
+                  <option value="Serbia">Serbia</option>
+                  <option value="Singapore">Singapore</option>
+                  <option value="Slovak Republic">Slovak Republic</option>
+                  <option value="Slovenia">Slovenia</option>
+                  <option value="South Africa">South Africa</option>
+                  <option value="South Sudan">South Sudan</option>
+                  <option value="Spain">Spain</option>
+                  <option value="Sri Lanka">Sri Lanka</option>
+                  <option value="Sudan">Sudan</option>
+                  <option value="Suriname">Suriname</option>
+                  <option value="Sweden">Sweden</option>
+                  <option value="Switzerland">Switzerland</option>
+                  <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+                  <option value="Tajikistan">Tajikistan</option>
+                  <option value="Tanzania">Tanzania</option>
+                  <option value="Thailand">Thailand</option>
+                  <option value="Togo">Togo</option>
+                  <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                  <option value="Tunisia">Tunisia</option>
+                  <option value="Turkey">Turkey</option>
+                  <option value="Turkmenistan">Turkmenistan</option>
+                  <option value="Ukraine">Ukraine</option>
+                  <option value="United Arab">United Arab</option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="United States">United States</option>
+                  <option value="Uruguay">Uruguay</option>
+                  <option value="Uzbekistan">Uzbekistan</option>
+                  <option value="Venezuela, RB">Venezuela, RB</option>
+                  <option value="Vietnam">Vietnam</option>
+                  <option value="Yemen, Rep.">Yemen, Rep.</option>
+                  <option value="Zambia">Zambia</option>
+                  <option value="Zimbabwe">Zimbabwe</option>
+                  <option value="United Kingdom" selected>- - - - - - - - - -</option>
+               </select>
+            </div>
+            <br>
+            <table id="inputTable" class="inputTable" style="width: 412.698px;">
+               <tbody>
+                  <tr>
+                     <td style="width: 86px;">&nbsp;</td>
+                     <td style="width: 275px;"><strong >% shares of electricity generation *</strong></td>
+                     <td style="text-align: left; width: 224.698px;"> <strong >emission intensity **</strong></td>
+                  </tr>
+                  <tr>
+                     <td style="width: 86px;"><label for="coal%">Coal</label></td>
+                     <td style="text-align: center; width: 175px;"><input id="coal%" class="num" type="text" value="0" /> %</td>
+                     <td style="width: 224.698px;"><input id="coalCO" class="num" type="text" value="820" /> gCO<sub>2</sub>/kWh</td>
+                  </tr>
+                  <tr>
+                     <td style="width: 86px;"><label for="gas%">Natural gas</label></td>
+                     <td style="text-align: center; width: 175px;"><input id="gas%" class="num" type="text" value="0" /> %</td>
+                     <td style="width: 224.698px;"><input id="gasCO" class="num" type="text" value="490" /> gCO<sub>2</sub>/kWh</td>
+                  </tr>
+                  <tr>
+                     <td style="width: 86px;"><label for="oil%">Oil</label></td>
+                     <td style="text-align: center; width: 175px;"><input id="oil%" class="num" type="text" value="0" /> %</td>
+                     <td style="width: 224.698px;"><input id="oilCO" class="num" type="text" value="778" /> gCO<sub>2</sub>/kWh</td>
+                  </tr>
+                  <tr>
+                     <td style="width: 86px;"><label for="hydro%">Hydropower</label></td>
+                     <td style="text-align: center; width: 175px;"><input id="hydro%" class="num" type="text" value="0" /> %</td>
+                     <td style="width: 224.698px;"><input id="hydroCO" class="num" type="text" value="24" /> gCO<sub>2</sub>/kWh</td>
+                  </tr>
+                  <tr>
+                     <td style="width: 86px;"><label for="renew%">Renewable</label></td>
+                     <td style="text-align: center; width: 175px;"><input id="renew%" class="num" type="text" value="0" /> %</td>
+                     <td style="width: 224.698px;"><input id="renewCO" class="num" type="text" value="41" /> gCO<sub>2</sub>/kWh</td>
+                  </tr>
+                  <tr>
+                     <td style="width: 86px;"><label for="nuclear%">Nuclear</label></td>
+                     <td style="text-align: center; width: 175px;"><input id="nuclear%" class="num" type="text" value="0" /> %</td>
+                     <td style="width: 224.698px;"><input id="nuclearCO" class="num" type="text" value="12" /> gCO<sub>2</sub>/kWh</td>
+                  </tr>
+                  <tr>
+                     <td style="width: 86px;"><label for="custom%">Custom</label></td>
+                     <td style="text-align: center; width: 175px;"><input id="custom%" class="num" type="text" value="0" /> %</td>
+                     <td style="width: 224.698px;"><input id="customCO" class="num" type="text" value="0" /> gCO<sub>2</sub>/kWh</td>
+                  </tr>
+               </tbody>
+            </table>
+            <br>
+            <p style="color:#e6e7bf;">
+               Net generation percentage: <b><span id="total%" style="color:#ff140b;"></span></b>
+               <br>
+               <label for="power">Current power usage: </label>
+               <input type="text" id="power" value="1000" class="power" onkeyup="Calculate()">
+               <select id="powerUnit" onchange="Calculate()" style="color: rgb(255, 255, 255)">
+                  <option value="1000" id="W" selected>W</option>
+                  <option value="1" id="kW">kW</option>
+                  <option value="0.001" id="MW">MW</option>
+               </select>
+               <br>
+               <br>
+            <div class="resultbox">
+               <p>Your annual emissions of <b><span id="kgCO2result" style="color:#ff140b;"> </span></b> kg of CO<sub>2</sub> are equivalent to 
+                  the annual carbon dioxide absorption of <b><span id="treesRequired" style="color:#ff140b;"></span></b> trees.
+               </p>
+               <input type="reset">
+               <br>
+               <br>
+
+               
+
+            </div>
+         </form>
+      </section>
+      
+      <body>
+         <div class='containertwo'>
+             <h2 style="color:#ffffff;">Car carbon footprint</h2>
+             <br>
+             <b style="color:#e6e7bf;"> Fuel efficiency </b>
+             <br>
+             <input id='mpg' type='number' placeholder='miles per gallon'/>
+             <br>
+             <br>
+             <b style="color:#e6e7bf;">Mileage</b>
+             <br>
+             <input id='dist' type='number' placeholder='miles'/>
+             <br>
+             <br>
+            <b style="color:#e6e7bf;">Trip per week</b>
+            <br>
+             <input id='trips' type='number' placeholder='frequency'/>
+             <br/>
+             <br/>
+             <button class='buttontwo' onclick='calcCO2()'>Calculate</button>
+           <br/>
+           <br/>
+         
+   
+         <div class='container text-center'>
+            <br>
+            <br>
+             <b style="color:#e6e7bf;">Carbon Footprint:</b>
+             <h1 id='result4' style="color:#ff140b;" class='bg-success rounded-lg'></h1>
+             <h3 style="color:#e6e7bf;">g CO2e / mile</h3>
+           <br/>
+             <b style="color:#e6e7bf;">Carbon Footprint this trip:</b>
+             <h1 id='result' style="color:#ff140b;" class='bg-success rounded-lg'></h1>
+             <h3 style="color:#e6e7bf;">kg CO2e</h3>
+           <br/>
+            <b style="color:#e6e7bf;">Carbon Footprint per week:</b>
+             <h1 id='result2' style="color:#ff140b;" class='bg-success rounded-lg'></h1>
+             <h3 style="color:#e6e7bf;">kg CO2e</h3>
+                     <br/>
+            <b style="color:#e6e7bf;">Carbon Footprint per year:</b>
+             <h1 id='result3' style="color:#ff140b;" class='bg-success rounded-lg'></h1>
+             <h3 style="color:#e6e7bf;">kg CO2e</h3>
+             <br>
+         </div>
+      </div>
+         
+         <script>
+             var res = document.getElementById("result");
+             var res2 = document.getElementById("result2");
+             var res3 = document.getElementById("result3");
+             var res4 = document.getElementById("result4");
+             var mpg = document.getElementById('mpg');
+             var dist = document.getElementById('dist');
+             var trip = document.getElementById('trips');
+      
+             function calcCO2() {
+                 var x = mpg.value;
+                 var y = dist.value;
+                 var z = trips.value;
+                 var calc4 = (8.8/x)*1000;
+                 var calc = (calc4 * y)/1000;
+                 var calc2 = (calc * z);
+                 var calc3 = (calc2*52);
+                 calc = calc.toFixed(2);
+                 calc2 = calc2.toFixed(2);
+                 calc3 = calc3.toFixed(2);
+                 calc4 = calc4.toFixed(1);
+                 console.log('calc is: ' + calc);
+                 res.innerHTML = calc;
+                 res2.innerHTML = calc2;
+                 res3.innerHTML = calc3; // emissions = (8.8/mpg) * distance * trips * 52 
+                 res4.innerHTML = calc4;
+             }
+         </script>
+     </body>
+
+   </section>
+
+      <br>
+      <script src="co2calc.js"></script>
+      <table style="width: 825px; margin-left: auto; margin-right: auto;">
+         <tbody>
+            <tr>
+               <td style="width: 361.078px; text-align: center; color:rgb(11, 9, 9);">You've undoubtedly heard a lot about climate change and how to minimize your carbon impact. But what precisely is it? </td>
+               <td style="width: 445.922px; "><iframe width="560" height="315" src="https://www.youtube.com/embed/8q7_aV8eLUE" title="YouTube video player" frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></td>
+            </tr>
+         </tbody>
+    
+      </table>
+      </body>
+
+
+</html>
